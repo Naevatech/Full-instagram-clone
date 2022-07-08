@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: Poppins;
+}
+
+
+
+@media screen and (min-width:760px) {
+    #container-open {
+        display: none;
+    }
+    .mainScreen {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(50px,auto);
+        margin: 0px auto;
+        gap: 10px;
+
+    }
+    header {
+        grid-column: 1/13;
+
+    }
+    nav {
+        grid-column: 2/12;
+    }
+    nav .hero{
+        height: 100vh;
+        width: 100%;
+        background-image: url(/images/img-main.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    nav img {
+        display: none;
+    }
+    main {
+        grid-column: 2/12;
+    }
+    footer {
+        grid-column: 1/13;
+    }
+
+}
+
+
+
+
+
+/* mobile responsiveness */
+
+@media screen and (max-width:350px) {
+    .mainScreen {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 5px;
+    
+    }
+    header {
+        border: 1px solid red;
+        
+    }
+    nav {
+        border: 1px solid red;
+        display: none;
+    }
+    nav img {
+        display: block;
+    }
+
+    main {
+        border: 1px solid red;
+        grid-column: 1/13;
+       
+    
+    
+    }
+    footer {
+        border: 1px solid red;
+        grid-column: 1/13;
+        
+    
+    }
+    
+}
+
+/* nav img{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/img-main-mobile.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+/* #preloader1 {
+    background: #131313 url(/images/simple-loader.gif) no-repeat center center;
+    height: 100%;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+} */
+
+
+
+
