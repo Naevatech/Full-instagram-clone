@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 app.use(cors())
-require("dotenv").config()
+require("dotenv").config();
 const bodyParser = require("body-parser")
 // app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true, limit:"50mb"}))

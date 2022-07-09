@@ -21,16 +21,6 @@ const Explore = () => {
         })
     }, [])
     
-    // const lik = (i) => {
-    //     setlikeCount(i)
-    // }
-    handleId = (e) => {
-        /*Well if the elements are nested event.target won't always work
-          since it refers to the target that triggers the event in the first place.*/
-         console.log(e.target.id);
-         console.log(e.currentTarget.id);
-    }
-    
 
   return (
     <>  
@@ -51,12 +41,7 @@ const Explore = () => {
                                     </div>
                                     <img src={plore.imageurl} className='img-fluid' alt="Fissure in Sandstone" style={{width:"453px", height:"453px"}}/>
                                     <div className='d-flex'>
-                                        {/* {likeCount ? */}
-                                         {/* <button id="yourID" onClick={this.handleId} className="uil uil-heart-alt border-0 fs-4 mx-2" style={{color:"#E41200"}}></button> */}
-                                         {/* : */}
-                                        <button id="yourID" onClick={this.handleId} className="uil uil-heart-alt border-0 fs-4 mx-2" style={{color:"#801080"}}></button>
-                                        
-                                        {/* } */}
+                                        <button id="yourID" className="uil uil-heart-alt border-0 fs-4 mx-2" style={{color:"#801080"}}></button>
                                         <button className="uil uil-comment border-0 fs-4 " style={{color:"#801080"}}></button>
                                         <button className="uil uil-telegram-alt border-0 fs-4 " style={{color:"#801080"}}></button>
                                     </div>

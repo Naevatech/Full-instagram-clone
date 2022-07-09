@@ -1,8 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Navbar from './Navbar'
- 
+import Modal from './Modal'
+
 const Home = () => {
+    const [openmodal, setopenmodal] = useState(false)
     const url = "http://localhost:4007/user/home"
     const [allUsers, setallUsers] = useState("")
     const [activeID, setactiveID] = useState("")
@@ -37,6 +39,7 @@ const Home = () => {
 
   return (
     <div>
+            < Modal open={openmodal} onClose={()=>setopenmodal(false)} />
             <Navbar/>
         <div className="container-fluid mt-3">
             <div className="row">
@@ -45,6 +48,7 @@ const Home = () => {
                     <div className="row">
                         <div className="col-12 col-md-2" >
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(2).jpg" alt="" className='ms-4 ms-md-1 rounded-circle img-fluid' />
+                            
                         </div>
                         <div className="col-12 col-md-8 mt-3 mt-md-0" >
                             <div className="display-5 fs-3 ms-4">{allUsers.username}</div>
@@ -53,7 +57,10 @@ const Home = () => {
                                 <div className='d-flex ms-5'><h6>0</h6><p  className='ms-2'>followers</p></div>
                                 <div className='d-flex ms-5'><h6>0</h6><p  className='ms-2'>following</p></div>
                             </div>
+                            <div className='d-flex' >
                             <h6 className=" ms-4">{allUsers.fullname}</h6>
+                            <button onClick={()=>setopenmodal(true)}  className="ph-gear-six bg-white fs-3 me-4 border-0" style={{color:"#808080", margin:"-4px 0 0 20px "}}></button>
+                            </div>
                         </div>
                         <div className="col-12 col-md-2" ></div>
                     </div>
