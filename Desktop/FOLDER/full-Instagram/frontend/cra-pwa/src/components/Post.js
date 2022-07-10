@@ -60,12 +60,12 @@ const Post = () => {
                 <div className="row">
                     <div className="col-12 col-md-1"></div>
 
-                    <div className="col-12 col-md-3">
-                        <label for="formFileLg" class="form-label">Large file input example</label>
-                        <input type="file" onChange={(e)=>choseimage(e)} class="form-control form-control-lg" id="formFileLg"/>
-                    </div>
 
                     <div className="col-12 col-md-4">
+                        <div className="col-12 col-md-3">
+                            <label for="formFileLg" className="form-label btn btn-outline-primary">Select</label>
+                            <input type="file" hidden onChange={(e)=>choseimage(e)} class="form-control form-control-lg" id="formFileLg"/>
+                        </div>
                         <div className='mt-3'>
                             {myfile && (
                                 <img src={myfile} alt="" style={{width:"100px"}} />

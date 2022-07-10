@@ -8,4 +8,5 @@ router.post("/login", userController.loginUser)
 // router.post('/Home',userController.Home)
 router.post("/post", userController.uploadPost)
 router.get("/home", userController.homeDisplay)
+router.post("/update", userController.updateProfile)
 module.exports = router

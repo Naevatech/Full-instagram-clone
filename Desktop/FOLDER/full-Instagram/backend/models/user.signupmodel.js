@@ -29,7 +29,11 @@ const signupSchema = mongoose.Schema({
         require:true
     },
     user_avatar:{
-        type:Number,
+        type:String,
+        require:true
+    },
+    website_link:{
+        type:String,
         require:true
     },
     date:{

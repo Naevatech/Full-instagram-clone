@@ -47,7 +47,7 @@ const Home = () => {
                 <div className="col-10 col-md-8">
                     <div className="row">
                         <div className="col-12 col-md-2" >
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(2).jpg" alt="" className='ms-4 ms-md-1 rounded-circle img-fluid' />
+                            <img src={allUsers.user_avatar }alt="" className='ms-4 ms-md-1 rounded-circle' style={{width:"150px", height:"150px"}} />
                             
                         </div>
                         <div className="col-12 col-md-8 mt-3 mt-md-0" >
